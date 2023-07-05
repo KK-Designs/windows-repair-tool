@@ -1,0 +1,39 @@
+{
+  "name": "windows-repair-tool",
+  "productName": "Windows Repair Tool",
+  "description": "A simple Windows repair tool that can help with some common errors via SFC and DISM scans. ",
+  "keywords": [],
+  "main": "./main.js",
+  "version": "1.0.0",
+  "author": "K.K Designs",
+  "build": {
+	"appId": "com.kkdesigns.windows-repair-tool",
+	"productName": "Windows Repair Tool",
+	"nsis": {
+		"artifactName": "${productName}-${arch}.${ext}",
+		"uninstallDisplayName": "${productName}"
+	},
+	"win": {
+		"publisherName": "K.K Designs",
+		"requestedExecutionLevel": "asInvoker",
+		"icon": "./logo.ico"
+	},
+	"files": [
+		"!.history/*",
+		"!.eslint*",
+		"!.gitignore",
+		"!README.*",
+		"!LICENSE"
+	],
+	"electronLanguages": "en-US"
+},
+  "scripts": {
+    "start": "electron .",
+	"lint": "eslint .",
+	"fix": "eslint . --fix"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "25.2.0"
+  }
+}

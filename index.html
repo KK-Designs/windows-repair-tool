@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="./styles.css" rel="stylesheet">
+    <title>Windows Repair</title>
+  </head>
+  <body>
+    <h1>Windows Repair</h1>
+	<p>This tool can help fix various errors in the Windows operating system. Simply click the buttons below to scan and fix issues in the specified category.</p>
+	<br />
+	<button id="chkDsk">Click to repair disk errors</button>
+	<br />
+	<br />
+	<button id="sfc">Click to repair system errors</button>
+	<br />
+	<br />
+	<button id="dism">Click to repair the windows image</button>
+	<div style="position: absolute; right: 0; top: 0; margin-top: 135px; padding-right: 12px;">
+		<p style="font-size: 0.75rem;">This area shows the output of the running operation if any.</p>
+		<div style="padding-top: 12px;"></div>
+		<textarea id="output" readonly></textarea>
+	</div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+  </body>
+</html>
